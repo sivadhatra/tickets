@@ -1,0 +1,14 @@
+.ticket-item {
+    width: 20rem;
+    max-width: 95%;
+    margin: 1rem;
+}
+
+.ticket__title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.ticket__description {
+    text-align: center;
+}

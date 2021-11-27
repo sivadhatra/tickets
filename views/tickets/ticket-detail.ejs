@@ -1,0 +1,11 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main class="centered">
+            <h2><%= ticket.subject %></h2>
+            <p><%= ticket.description %></p>
+            <p>Ticket Status: <b><%= ticket.status %></b></p>
+        </main>
+        <%- include('../includes/end.ejs') %>

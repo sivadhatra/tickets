@@ -1,0 +1,46 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/ticket.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <% if (tickets.length > 0) { %>
+            <div class="grid">
+                <% for (let ticket of tickets) { %>
+                    <% var ticketId = ticket.url.split("/").pop(); %>
+                    <% var prev = pagination-1; %>
+                    <% var next = pagination+1; %>
+                    <% console.log(ticketId); %>
+                    <article class="card ticket-item">
+                        <header class="card__header">
+                            <h1 class="ticket__title"><%= ticket.subject %></h1>
+                        </header>
+                        <div class="card__image">
+                            <img src="<%= ticket.imageUrl %>"
+                                alt="<%= ticket.title %>">
+                        </div>
+                        <div class="card__content">
+                            <p class="ticket__description"><%= ticket.description.substring(0,50) %>...</p>
+                        </div>
+                        <div class="card__actions">
+                                <a href="/tickets/<%= ticketId %>" class="btn">Ticket Details</a>
+                                <div>Ticket Status: <b><%= ticket.status %></b></div>
+                        </div>
+                    </article>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No tickets Found!</h1>
+        <% } %>
+        <div class="hash">
+        <% if(prev){ %>
+            <a href="/<%= pagination-1 %>" class="btn">Previous</a>
+        <% } %>
+        <% if(next){ %>
+            <a href="/<%= parseInt(pagination)+1 %>" class="btn">Next</a>
+        <% } %>
+        </div>
+    </main>
+<%- include('../includes/end.ejs') %>

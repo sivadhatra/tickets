@@ -1,0 +1,25 @@
+{
+  "name": "Zendesk Ticket Viewer",
+  "version": "1.0.0",
+  "description": "This application created for displaying zendesk tickets for the user",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "author": "Siva Dhatra Karuturi",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "jest": "^27.3.1",
+    "pug": "^2.0.3",
+    "request": "^2.88.2"
+  }
+}
