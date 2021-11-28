@@ -6,7 +6,7 @@ exports.getTicket = (req, res, next) => {
   request.get({
     url: url,
     headers:{
-      "Authorization": "Basic a2FydXR1cmkuZGhhdHJhQGdtYWlsLmNvbTpLU0R0YWhfMTk5NQ==",
+      "Authorization": "Basic a2FydXR1cmkuZGhhdHJhQGdtYWlsLmNvbTpSYW5kb21AMTk5NQ==",
       "Accept": "application/json"
     }
   }, function(error, response, body){
@@ -43,7 +43,7 @@ exports.getIndex = (req, res, next) => {
   request.get({
     url: url,
     headers:{
-      "Authorization": "Basic a2FydXR1cmkuZGhhdHJhQGdtYWlsLmNvbTpLU0R0YWhfMTk5NQ==",
+      "Authorization": "Basic a2FydXR1cmkuZGhhdHJhQGdtYWlsLmNvbTpSYW5kb21AMTk5NQ==",
       "Accept": "application/json"
     }
   }, function(error, response, body){
